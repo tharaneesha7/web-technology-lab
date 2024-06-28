@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Home Appliances Store</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <style>
+    body {
+      padding: 20px;
+      background-image: url("b10.png");
+      background-size: cover;
+      background-color: #f0f8ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    label {
+      color: #333;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    #confirmationMessage {
+      margin-top: 30px;
+      color: #333;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Contact Us</h1>
+    <form id="submitForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+    
+    <div id="confirmationMessage" class="text-center hidden">
+      <h2><b>Thank You!</b></h2>
+      <p>Your message has been successfully submitted.</p>
+    </div>
+  </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    document.getElementById('submitForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      
+      
+      document.getElementById('submitForm').classList.add('hidden');
+      document.getElementById('confirmationMessage').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

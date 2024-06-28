@@ -1,0 +1,13 @@
+div{
+    border: 5px outset black;
+      text-align: center;
+    font-family:Arial;
+background-color:pink;}
+    
+body
+{
+    background-image:url("bg.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+
+}

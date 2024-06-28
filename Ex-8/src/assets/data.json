@@ -1,0 +1,32 @@
+[
+    {
+      "name": "MUKIL S",
+      "registerNumber": "22ITR064",
+      "dept": "IT",
+      "cgpa":"9.01"
+    },
+    {
+        "name": "Thaneesh A",
+        "registerNumber": "22ITR109",
+        "dept": "IT",
+        "cgpa":"9.23"
+    },
+    {
+        "name": "Vicky",
+        "registerNumber": "22ITR119",
+        "dept": "IT",
+        "cgpa":"9.06"
+    },
+    {
+        "name": "Praneesh",
+      "registerNumber": "22ITR078",
+      "dept": "IT",
+      "cgpa":"8.95"
+    },
+    {
+        "name": "Naveen",
+      "registerNumber": "22ITR068",
+      "dept": "IT",
+      "cgpa":"9.44"
+    }
+  ]

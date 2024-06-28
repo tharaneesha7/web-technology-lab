@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: skyblue;
+            margin: 0;
+            padding: 0;
+            background-image: url("pic1.jpg");
+            color: white;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat; 
+            background-size: cover; 
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black; 
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        select,
+        input[type="radio"] {
+            width: calc(100% - 22px); 
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-container label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .radio-container input[type="radio"] {
+            display: inline-block;
+            width: auto;
+            margin-right: 5px;
+        }
+        input[type="submit"],
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px; 
+        }
+        input[type="submit"]:hover,
+        button:hover {
+            background-color: #45a049;
+        }
+        #displayData {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Login Form</h2>
+    <form id="loginForm" action="http://localhost:7050/login" method="post">
+        <label for="username">Employee Name</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+
+        <label for="id">Employee ID</label>
+        <input type="text" id="id" name="id" placeholder="Enter your ID" required>
+
+        <label for="branch">Branch</label>
+        <select id="branch" name="branch" required>
+            <option value="select">Select Branch</option>
+            <option value="HQ">Testing</option>
+            <option value="development">Development</option>
+            <option value="QA">Project Manager</option>
+            <option value="support">Digital Marketing</option>
+            <option value="sales">Sales</option>
+        </select>
+        <div class="radio-container">
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="male" required><label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required><label for="female">Female</label>
+        </div>
+       
+        <label for="phno">Mobile No</label>
+        <input type="text" id="phno" name="phno" placeholder="Enter your mobile number" required>
+
+        <label for="branchadd">Branch Address</label>
+        <textarea class="form-control" id="branchadd" name="branchadd" placeholder="Enter branch address" rows="4" cols="50" required></textarea>
+
+        <input type="submit" value="Insert">
+        <button type="button" onclick="redirectToUpdate()">Update</button>
+        <button type="button" onclick="redirectToDelete()">Delete</button>
+        <button type="button" onclick="displayFormData()">Display</button>
+    </form>
+</div>
+
+<div id="displayData" class="container" style="display: none;">
+    <h2>Database Collection</h2>
+    <ul id="dataList"></ul>
+</div>
+
+<script>
+    function redirectToUpdate() {
+        window.location.href = "update.html";
+    }
+
+    function redirectToDelete() {
+        window.location.href = "delete.html";
+    }
+
+    function displayFormData() {
+        window.location.href = 'http://localhost:7050/display';
+    }
+</script>
+</body>
+</html>
+

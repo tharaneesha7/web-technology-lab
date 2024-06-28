@@ -1,0 +1,168 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeep Compass Car</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+        background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+        margin: 0; 
+      }
+      .navbar {
+        background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+        width: 100%; 
+
+      }
+      .navbar-brand {
+        font-weight: bold;
+
+      }
+      .navbar-nav {
+        margin: auto;
+
+      }
+      .navbar-nav .nav-link {
+        color: #000000;
+        font-weight: bold;
+
+      }
+      .container {
+        margin-top: 20px;
+      }
+      .car-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto; 
+      }
+      .section {
+        display: none;
+      }
+      .section:target {
+        display: block;
+      }
+      .image-container {
+        text-align: center;
+      }
+      .product-details {
+        text-align: left;
+        font-size: 1.7em; 
+      }
+      .about-content {
+        font-size: 1.2em;
+      }
+      .service-content {
+        font-size: 1.2em;
+      }
+      .contact-details {
+        font-size: 1.2em;
+      }
+      .img-fluid{
+        height: 300px;
+        width: 500px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Jeep Compass Car</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Product">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Service">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Contact">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            More
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="home" class="container section">
+    <div class="card">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <img src="bg.png" alt="Jeep Compass Car" class="card-img">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <ul class="product-details">
+              <li>Engine: 2000cc</li>
+              <li>Drive type: Fwd/4wd</li>
+              <li>Mileage: 15-17kmpl</li>
+              <li>Transmission: automatic</li>
+              <li>Fuel tank: 60litres</li>
+              <li>Body type: Suv</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="about" class="container section">
+    <h2>About</h2>
+    <p class="about-content">The Jeep Compass, a versatile compact SUV, combines rugged capability with modern amenities. With its sleek design and powerful performance, the Compass navigates both city streets and off-road trails effortlessly. Equipped with advanced technology and safety features, it offers a comfortable and secure driving experience. Whether you're commuting to work or exploring new horizons, the Jeep Compass ensures a thrilling journey every time. Experience the perfect blend of style, comfort, and adventure with the iconic Jeep Compass.</p>
+  </div>
+  <div id="Product" class="container section">
+    <h2>Product</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="jw.jpeg" alt="Product 1" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <img src="ja.png" alt="Product 2" class="img-fluid">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="jc.png" alt="Product 3" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <img src="jm.png" alt="Product 4" class="img-fluid">
+        </div>
+    </div>
+</div>
+s
+
+
+
+
+  <div id="Service" class="container section">
+    <h2>Service</h2>
+    <p class="service-content">At Jeep, our commitment to excellence extends beyond the vehicle itself. Our service department is dedicated to providing unparalleled support, ensuring your Jeep Compass remains in peak condition. With highly trained technicians and state-of-the-art facilities, we offer comprehensive maintenance and repair services tailored to your needs. From routine inspections to major repairs, trust us to keep your Compass running smoothly. Experience reliability and peace of mind with Jeep's exceptional service.</p>
+  </div>
+
+  <div id="Contact" class="container section">
+    <h2>Contact Us</h2>
+    <p class="contact-details">Contact: jeepcompass@gmail.com <br> Phone: 044-123456789</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,29 @@
+/* Style for the toolbar */
+.toolbar {
+    background-color: #333; /* Background color for the toolbar */
+    overflow: hidden; /* Ensures the toolbar contains the floated elements */
+  }
+  
+  /* Style for the navigation links */
+  .toolbar nav a {
+    float: left; /* Align the links horizontally */
+    display: block; /* Ensures the entire link area is clickable */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text within the link */
+    padding: 14px 20px; /* Padding around the text */
+    text-decoration: none; /* Removes underline from the links */
+    margin-right: 10px; /* Adds spacing between each link */
+  }
+  
+  /* Style for links on hover */
+  .toolbar nav a:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: black; /* Text color on hover */
+  }
+  
+  /* Style for the active link */
+  .toolbar nav a.active {
+    background-color: #4CAF50; /* Background color for the active link */
+    color: white; /* Text color for the active link */
+  }
+  

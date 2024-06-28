@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        #s {
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            display: flex;
+            width: 550px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form id="s" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td>Enter Name :</td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Select Gender :</td>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="male">Male
+                        <input type="radio" name="gender" id="female" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Language Known :</td>
+                    <td><input type="checkbox" id="english">C</td>
+                    <td><input type="checkbox" id="tamil">C++</td>
+                    <td><input type="checkbox" id="hindi">Java</td>
+                </tr>
+                <tr>
+                    <td>District :</td>
+                    <td><input type="text" id="district"></td>
+                </tr>
+                <tr>
+                    <td>Address :</td>
+                    <td><textarea id="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Enter Email :</td>
+                    <td><input type="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Enter Phone Number :</td>
+                    <td><input type="tel" id="phone"></td>
+                </tr>
+                <tr>
+                    <td>Enter Username :</td>
+                    <td><input type="text" id="username"></td>
+                </tr>
+                <tr>
+                    <td>Enter Password :</td>
+                    <td><input type="password" id="password"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var maleChecked = document.getElementById("male").checked;
+            var femaleChecked = document.getElementById("female").checked;
+            var district = document.getElementById("district").value;
+            var address = document.getElementById("address").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var englishChecked = document.getElementById("c").checked;
+            var tamilChecked = document.getElementById("c++").checked;
+            var hindiChecked = document.getElementById("java").checked;
+
+            var nameRegex = /^[a-zA-Z\s]+$/;
+            var usernameRegex = /^[a-zA-Z][a-zA-Z0-9]+$/;
+            var passwordRegex = /^[A-Z][a-zA-Z\d!@#*$%^&\s]+$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!nameRegex.test(name)) {
+                alert("Name should contain alphabets and spaces only.");
+                return false;
+            }
+            if (address.trim() === "") {
+                alert("Please enter your address.");
+                return false;
+            }
+            if (!usernameRegex.test(username)) {
+                alert("Username should be alphanumeric and start with an alphabet.");
+                return false;
+            }
+            if (!passwordRegex.test(password)) {
+                alert("Password should contain at least one uppercase, lowercase, digit, and special character.");
+                return false;
+            }
+            if (!maleChecked && !femaleChecked) {
+                alert("Please select your gender.");
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            if (!cChecked && !c++Checked && !javaChecked) {
+                alert("Please select at least one language known.");
+                return false;
+            }
+            alert("All validations are correct.");
+            return true;
+        }
+    </script>
+</body>
+</html>

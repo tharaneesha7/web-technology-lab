@@ -1,0 +1,17 @@
+/* Name Selector */
+p[name="paragraph"] {
+    color: blue;
+    font-size: 18px;
+}
+
+/* Class Selector */
+p.paragraph {
+    color: green;
+    font-size: 20px;
+}
+
+/* ID Selector */
+#paragraph {
+    color: red;
+    font-size: 22px;
+}
